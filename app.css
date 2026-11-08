@@ -295,3 +295,7 @@ select[data-servicio] { max-width: 100%; }
   .doc-tot { justify-content: stretch; grid-template-columns: 1fr auto; }
   .doc-legal, .doc-pie, .facts dd { overflow-wrap: anywhere; }
 }
+
+.form .seg { flex-wrap: wrap; max-width: 100%; }
+.form .seg label { display: flex; }
+
