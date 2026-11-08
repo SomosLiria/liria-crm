@@ -262,3 +262,36 @@ select[data-servicio] { max-width: 100%; }
   .shell { display: block; } body { background: #fff; color: #111; } .main { padding: 0; }
   .panel { border: 0; background: #fff; padding: 0; } th { background: #f2f2f2; color: #333; } td, th { border-color: #ddd; }
 }
+
+/* ---------- Documento de factura (pantalla y PDF) ---------- */
+.doc { --act: var(--accent); color: var(--text); display: grid; gap: var(--s5); font-size: var(--t-sm); }
+.doc-head { display: flex; justify-content: space-between; gap: var(--s5); flex-wrap: wrap; border-top: 4px solid var(--act); padding-top: var(--s4); }
+.doc-marca { font-size: var(--t-xl); letter-spacing: -.02em; display: block; margin-bottom: 6px; }
+.doc-legal, .doc-cli div, .doc-num div { color: var(--muted); line-height: 1.5; }
+.doc-num { text-align: right; }
+.doc-num span, .doc-cli span { display: block; font-size: var(--t-xs); color: var(--faint); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+.doc-num b { font-size: var(--t-lg); display: block; margin: 2px 0 4px; font-variant-numeric: tabular-nums; }
+.doc-cli b { font-size: var(--t-md); display: block; margin: 2px 0; }
+.doc-tabla th { background: transparent; border-bottom: 1px solid var(--line); position: static; }
+.doc-tabla td.wrap { min-width: 0; white-space: normal; }
+.doc-tot { display: grid; grid-template-columns: auto auto; justify-content: end; gap: 6px var(--s6); margin: 0; font-variant-numeric: tabular-nums; }
+.doc-tot dt { color: var(--muted); } .doc-tot dd { margin: 0; text-align: right; }
+.doc-tot .grand { font-size: var(--t-lg); font-weight: 700; color: var(--text); border-top: 1px solid var(--line); padding-top: 8px; }
+.doc-nota { margin: 0; color: var(--muted); }
+.doc-pie { border-top: 1px solid var(--line); padding-top: var(--s3); color: var(--muted); display: grid; gap: 4px; }
+.doc-hoja { background: #fff; color: #16181b; border-radius: var(--r); padding: 48px; max-width: 860px; }
+.doc-hoja .doc { --text: #16181b; --muted: #4b5560; --faint: #6b747d; --line: #d9dde1; color: #16181b; }
+.doc-hoja .doc-tabla td, .doc-hoja .doc-tabla th { border-color: #e4e7ea; color: #16181b; }
+.doc-hoja tbody tr:hover { background: transparent; }
+@media print {
+  @page { size: A4; margin: 16mm; }
+  .doc-hoja { padding: 0; max-width: none; border-radius: 0; }
+  .main > .flash, .crumb { display: none !important; }
+}
+@media (max-width: 860px) {
+  .doc-hoja { padding: 20px; }
+  .doc-num { text-align: left; }
+  .doc-tabla { display: block; overflow-x: auto; }
+  .doc-tot { justify-content: stretch; grid-template-columns: 1fr auto; }
+  .doc-legal, .doc-pie, .facts dd { overflow-wrap: anywhere; }
+}
