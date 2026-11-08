@@ -312,3 +312,5 @@ tr.sel { background: var(--accent-soft); }
 
 .alertas { margin-bottom: var(--s4); border-color: rgba(240,90,40,.35); }
 .alertas .tasks a { font-weight: 600; }
+
+.casilla { display: inline-block; min-width: 3.2em; font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 700; }
