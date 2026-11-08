@@ -309,3 +309,6 @@ select[data-servicio] { max-width: 100%; }
 .sub-h { font-size: var(--t-sm); color: var(--faint); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; margin: var(--s5) 0 var(--s1); }
 tr.sel { background: var(--accent-soft); }
 @media (max-width: 860px) { .copy-row { grid-template-columns: minmax(0, 1fr) auto; } .copy-row .btn { grid-column: 1 / -1; justify-self: start; } }
+
+.alertas { margin-bottom: var(--s4); border-color: rgba(240,90,40,.35); }
+.alertas .tasks a { font-weight: 600; }
