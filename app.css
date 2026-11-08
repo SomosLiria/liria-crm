@@ -299,3 +299,13 @@ select[data-servicio] { max-width: 100%; }
 .form .seg { flex-wrap: wrap; max-width: 100%; }
 .form .seg label { display: flex; }
 
+
+/* Impuestos: filas para copiar a Hacienda */
+.copy-row { display: grid; grid-template-columns: minmax(0, 1fr) auto 80px; gap: var(--s3); align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line-soft); }
+.copy-row span { color: var(--muted); font-size: var(--t-sm); }
+.copy-row b { font-size: var(--t-md); text-align: right; }
+.copy-row.grand b { font-size: var(--t-xl); color: var(--accent); }
+.copy-row.grand span { color: var(--text); font-weight: 600; }
+.sub-h { font-size: var(--t-sm); color: var(--faint); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; margin: var(--s5) 0 var(--s1); }
+tr.sel { background: var(--accent-soft); }
+@media (max-width: 860px) { .copy-row { grid-template-columns: minmax(0, 1fr) auto; } .copy-row .btn { grid-column: 1 / -1; justify-self: start; } }
