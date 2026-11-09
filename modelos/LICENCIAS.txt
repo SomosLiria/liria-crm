@@ -1,0 +1,6 @@
+Modelos 3D de la oficina virtual de Somos Liria
+
+Personas y animaciones: Microsoft Rocketbox Avatar Library (https://github.com/microsoft/Microsoft-Rocketbox), licencia MIT, Copyright (c) 2020 Microsoft.
+Convertidas a glTF por Somos Liria: texturas reducidas y ropa reteñida con el uniforme de Liria.
+
+Mobiliario: Kenney Furniture Kit (kenney.nl) y KayKit Furniture Bits 1.0 (Kay Lousberg), licencia CC0 (dominio público).
