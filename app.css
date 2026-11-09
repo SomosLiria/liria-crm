@@ -355,3 +355,8 @@ tr.sel { background: var(--accent-soft); }
 .of3d-tag em { display: block; font-style: normal; font-size: 10px; opacity: .72; font-weight: 500; }
 .of3d-tag.sel { border-color: #f2622e; box-shadow: 0 0 0 3px rgba(242,98,46,.45); z-index: 6; }
 .of3d-tag.sel span { display: block; }
+
+/* Informe de la mañana, propuestas y puesta en marcha */
+.of-informe { border-left: 4px solid #f2622e; }
+.of-linea { display: flex; flex-direction: column; gap: 2px; padding: 6px 0; border-bottom: 1px solid var(--line-soft); }
+.of-linea .muted { font-size: .8125rem; }
