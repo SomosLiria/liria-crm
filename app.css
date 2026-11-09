@@ -390,3 +390,35 @@ tr.sel { background: var(--accent-soft); }
 .rend-dia { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; min-width: 8px; }
 .rend-dia span { width: 100%; max-width: 34px; min-height: 2px; background: #f2622e; border-radius: 4px 4px 0 0; }
 .rend-dia em { font-style: normal; font-size: 10px; color: var(--muted, #8a8f98); margin-top: 4px; }
+
+/* ---------- Embudo de ventas ---------- */
+.emb-kpis .kpi { text-decoration: none; color: inherit; }
+.emb-kpis a.kpi:hover { border-color: #f2622e; }
+.kpi-mal .v { color: #ff6b5b; } .kpi-aviso .v { color: #ffb347; }
+.emb-filtros { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: var(--s3) 0; }
+.emb-filtros input[type=search] { min-width: 240px; flex: 1 1 240px; max-width: 360px; }
+.emb-filtros select { width: auto; }
+.emb-board { grid-auto-columns: minmax(270px, 1fr); }
+.emb-board .col { max-height: calc(100dvh - 330px); }
+.emb-card { border-left: 3px solid transparent; padding: 10px 12px; }
+.emb-card.a-vencida { border-left-color: #ff5a4d; }
+.emb-card.a-fria, .emb-card.a-sin_contactar { border-left-color: #ffb347; }
+.emb-top { display: flex; justify-content: space-between; gap: 8px; align-items: start; }
+.emb-top a { font-weight: 700; line-height: 1.25; }
+.emb-nota { flex: none; font-size: 11px; padding: 2px 7px; border-radius: 999px; background: var(--raised, #22252b); border: 1px solid var(--line); white-space: nowrap; }
+.emb-nota.c-oportunidad { background: rgba(47,163,122,.16); border-color: rgba(47,163,122,.5); color: #7fdcb5; }
+.emb-nota.c-dudosa { background: rgba(255,179,71,.14); border-color: rgba(255,179,71,.45); color: #ffcf8a; }
+.emb-nota.c-descartar { opacity: .7; }
+.emb-sub { font-size: 12px; color: var(--muted); margin: 3px 0 6px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.emb-chip { font-size: 11px; padding: 1px 6px; border-radius: 6px; border: 1px solid var(--line); color: var(--text, #e9eaee); }
+.emb-fechas { margin: 0 0 8px; display: grid; gap: 3px; font-size: 12px; }
+.emb-fechas div { display: flex; gap: 6px; align-items: baseline; }
+.emb-fechas dt { width: 16px; flex: none; text-align: center; }
+.emb-fechas dd { margin: 0; color: var(--muted); }
+.emb-fechas .p-vencida dd { color: #ff7a6b; font-weight: 600; }
+.emb-fechas .p-hoy dd { color: #f2622e; font-weight: 600; }
+.emb-sin { opacity: .65; font-style: italic; }
+.emb-card select { width: 100%; font-size: 12px; padding: 4px 6px; }
+.emb-vacio { list-style: none; color: var(--muted); font-size: 12px; padding: 12px; text-align: center; }
+.emb-kpis { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+@media (max-width: 900px) { .emb-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
