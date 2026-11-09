@@ -360,3 +360,27 @@ tr.sel { background: var(--accent-soft); }
 .of-informe { border-left: 4px solid #f2622e; }
 .of-linea { display: flex; flex-direction: column; gap: 2px; padding: 6px 0; border-bottom: 1px solid var(--line-soft); }
 .of-linea .muted { font-size: .8125rem; }
+
+/* ---------- Oficina a todo el ancho y alto ---------- */
+.main.ancha { max-width: none; }
+.main.ancha .of3d-wrap { position: relative; display: block; height: calc(100dvh - 196px); min-height: 440px; margin-top: var(--s3); border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: #15171b; }
+.main.ancha .of3d { position: absolute; inset: 0; height: auto; min-height: 0; border: 0; border-radius: 0; }
+.main.of-expandida { padding-top: var(--s3); padding-bottom: var(--s3); }
+.main.of-expandida .head, .main.of-expandida .tabs, .main.of-expandida .of-secundario, .main.of-expandida > .flash { display: none; }
+.main.of-expandida .of3d-wrap { height: calc(100dvh - 2 * var(--s3)); margin-top: 0; }
+.of3d-wrap:fullscreen { height: 100dvh !important; border-radius: 0; border: 0; }
+.of3d-ctrl { position: absolute; left: 12px; top: 12px; z-index: 4; display: flex; gap: 6px; flex-wrap: wrap; }
+.of3d-ctrl .btn { background: rgba(21,23,27,.82); backdrop-filter: blur(6px); border-color: rgba(255,255,255,.14); color: #fff; min-width: 34px; }
+.of3d-ctrl .btn:hover, .of3d-ctrl .btn[aria-pressed="true"] { border-color: #f2622e; }
+.of3d-wrap .of3d-panel { position: absolute; right: 12px; top: 12px; bottom: 12px; width: min(380px, calc(100% - 24px)); z-index: 5; overflow: auto; max-height: none; padding: var(--s4); border-radius: 14px; background: rgba(24,26,31,.94); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.1); box-shadow: 0 12px 40px rgba(0,0,0,.45); }
+.of3d-wrap .of3d-panel h2 { margin: 0; }
+@media (max-width: 900px) {
+  .main.ancha .of3d-wrap { height: 62dvh; }
+  .of3d-wrap .of3d-panel { top: auto; height: 55%; left: 8px; right: 8px; bottom: 8px; width: auto; }
+}
+.main.ancha .of3d-leyenda { position: absolute; left: 12px; bottom: 12px; z-index: 4; margin: 0; max-width: calc(100% - 420px); }
+.main.ancha .of3d-leyenda .of3d-ley { background: rgba(21,23,27,.82); backdrop-filter: blur(6px); border-color: rgba(255,255,255,.12); color: #e9eaee; }
+.main.ancha .of3d-wrap:not(.con-panel) .of3d-leyenda { max-width: calc(100% - 24px); }
+@media (max-width: 900px) { .main.ancha .of3d-leyenda { display: none; } }
+.main.ancha .of3d-wrap { height: calc(100dvh - 176px); }
+.main.ancha .of3d { isolation: isolate; z-index: 0; }
