@@ -384,3 +384,9 @@ tr.sel { background: var(--accent-soft); }
 @media (max-width: 900px) { .main.ancha .of3d-leyenda { display: none; } }
 .main.ancha .of3d-wrap { height: calc(100dvh - 176px); }
 .main.ancha .of3d { isolation: isolate; z-index: 0; }
+
+/* Rendimiento de la oficina */
+.rend-barras { display: flex; align-items: flex-end; gap: 4px; height: 140px; padding-top: 8px; }
+.rend-dia { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; min-width: 8px; }
+.rend-dia span { width: 100%; max-width: 34px; min-height: 2px; background: #f2622e; border-radius: 4px 4px 0 0; }
+.rend-dia em { font-style: normal; font-size: 10px; color: var(--muted, #8a8f98); margin-top: 4px; }
