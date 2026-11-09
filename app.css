@@ -422,3 +422,5 @@ tr.sel { background: var(--accent-soft); }
 .emb-vacio { list-style: none; color: var(--muted); font-size: 12px; padding: 12px; text-align: center; }
 .emb-kpis { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 @media (max-width: 900px) { .emb-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.of3d-vistas { width: auto; background: rgba(21,23,27,.82); color: #fff; border-color: rgba(255,255,255,.14); font-size: 13px; padding: 4px 8px; }
+.of3d-tag.of3d-ceo { border-color: #f2622e; background: rgba(242,98,46,.18); }
