@@ -430,3 +430,8 @@ tr.sel { background: var(--accent-soft); }
 @media (max-width: 900px) { .of3d-mini { display: none; } }
 .of3d-host canvas.of3d-mini { inset: auto; right: 12px; bottom: 56px; width: 210px; height: 140px; }
 .of3d-wrap.con-panel .of3d-host canvas.of3d-mini { right: 404px; }
+/* Embudo: acciones de la tarjeta y sugerencias de los agentes */
+.emb-acciones { display: flex; gap: 6px; margin-top: 8px; }
+.emb-acciones select { flex: 1; min-width: 0; }
+.emb-sug { display: inline-block; font-size: .6875rem; padding: 1px 6px; border-radius: 999px; background: rgba(120, 140, 170, .18); color: var(--muted, #9aa3ad); margin-right: 4px; }
+.p-sugerida dd, .p-sin_fecha dd { color: var(--muted, #9aa3ad); }
