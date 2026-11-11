@@ -453,3 +453,18 @@ tr.sel { background: var(--accent-soft); }
 .chat-form { display: flex; gap: 8px; align-items: flex-end; border-top: 1px solid rgba(255,255,255,.08); padding-top: 12px; }
 .chat-form textarea { flex: 1; resize: vertical; }
 @media (max-width: 760px) { .chat { grid-template-columns: 1fr; } .chat-lista { flex-direction: row; overflow-x: auto; } .chat-ag { min-width: 140px; } }
+.kpi .d { font-size: .75rem; opacity: .7; margin-top: 2px; }
+/* Diagnóstico: qué le podemos resolver */
+.diag-res { margin: 0 0 12px; }
+.diag-lista { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 12px; }
+.diag-lista li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; }
+.diag-ic { font-size: 1.25rem; line-height: 1.2; }
+.diag-lista p { margin: 2px 0; }
+.diag-gana { color: #9BE3BE; font-weight: 500; }
+.prop-logo { width: 150px; height: auto; display: block; margin-bottom: 6px; }
+.prop-tit { font-size: 1.25rem; margin: 0; color: #16181b; }
+.prop-intro { margin: 0; font-size: 1rem; }
+.prop-punto { border-left: 3px solid #e8501a; padding-left: 12px; }
+.prop-punto h3 { margin: 0 0 4px; font-size: 1rem; color: #16181b; }
+.prop-punto p { margin: 3px 0; }
+.prop-gana { color: #1f7a4d; }
