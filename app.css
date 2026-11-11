@@ -165,6 +165,7 @@ tfoot td { font-weight: 650; background: #171c21; border-top: 1px solid var(--li
 /* ---------- Avisos ---------- */
 .flash { display: flex; gap: var(--s2); align-items: center; padding: var(--s3) var(--s4); border-radius: var(--r-sm); margin-bottom: var(--s4); font-size: var(--t-sm); font-weight: 500; background: rgba(79,196,139,.1); color: #9BE3BE; border: 1px solid rgba(79,196,139,.25); animation: drop .25s var(--ease); }
 .flash.err { background: rgba(255,107,107,.1); color: #FFB3B3; border-color: rgba(255,107,107,.3); }
+.flash svg { width: 18px; height: 18px; flex: none; }
 .note { font-size: var(--t-sm); color: var(--muted); background: #1d2228; border: 1px solid var(--line); border-radius: var(--r-sm); padding: var(--s3) var(--s4); }
 .note b { color: var(--text); }
 @keyframes drop { from { opacity: 0; transform: translateY(-4px); } }
