@@ -468,3 +468,5 @@ tr.sel { background: var(--accent-soft); }
 .prop-punto h3 { margin: 0 0 4px; font-size: 1rem; color: #16181b; }
 .prop-punto p { margin: 3px 0; }
 .prop-gana { color: #1f7a4d; }
+.emb-aviso { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 0 0 12px; }
+.emb-cuando { display: inline-block; font-size: .6875rem; font-weight: 600; padding: 1px 7px; border-radius: 999px; background: rgba(242, 98, 46, .15); color: #f2a07e; }
