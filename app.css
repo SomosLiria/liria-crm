@@ -474,3 +474,54 @@ tr.sel { background: var(--accent-soft); }
 .prob { display: inline-block; font-size: .75rem; font-weight: 600; padding: 1px 7px; border-radius: 999px; white-space: nowrap; }
 .prob-alta { background: rgba(79,196,139,.15); color: #9BE3BE; } .prob-media { background: rgba(242,180,60,.15); color: #f2c66b; } .prob-baja { background: rgba(255,107,107,.12); color: #ffb3b3; }
 .paginas { display: flex; gap: 10px; align-items: center; justify-content: center; margin-top: 12px; }
+
+/* ===== Móvil: barra inferior, acciones rápidas y tablas como tarjetas ===== */
+.tabbar, .hoja-acciones, .velo { display: none; }
+@media (max-width: 860px) {
+  .rail { display: none; }
+  body.movil-menu .rail { display: flex; position: fixed; inset: auto 0 0 0; top: 12vh; height: auto; z-index: 40; flex-direction: column; padding: var(--s4) var(--s4) calc(88px + env(safe-area-inset-bottom)); border-radius: 18px 18px 0 0; border-top: 1px solid var(--line); overflow-y: auto; background: var(--rail); }
+  body.movil-menu .rail .nav { grid-auto-flow: row; grid-auto-columns: auto; overflow: visible; }
+  body.movil-menu .rail .nav a { flex-direction: row; font-size: var(--t-base); padding: 12px 10px; text-align: left; gap: 12px; }
+  body.movil-menu .rail .nav a .count { position: static; margin: 0 0 0 auto; }
+  body.movil-menu .rail .nav-group { display: block; margin-top: var(--s3); }
+  body.movil-menu .rail .nav-out, body.movil-menu .rail .who { display: block; }
+  .tabbar { display: grid; grid-template-columns: repeat(5, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--rail); border-top: 1px solid var(--line); padding: 6px 6px calc(6px + env(safe-area-inset-bottom)); }
+  .tabbar a, .tabbar button { all: unset; box-sizing: border-box; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 52px; font-size: 11px; color: var(--muted); border-radius: 12px; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .tabbar a[aria-current="page"], .tabbar button[aria-expanded="true"] { color: var(--text); background: var(--raised); }
+  .tabbar a:focus-visible, .tabbar button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tabbar .count { position: absolute; top: 2px; left: 50%; margin-left: 6px; }
+  .tabbar .tab-mas { background: var(--accent); color: var(--accent-ink); width: 54px; height: 54px; min-height: 54px; border-radius: 50%; justify-self: center; align-self: center; margin-top: -20px; box-shadow: 0 6px 18px rgba(240, 90, 40, .35); transition: transform .2s var(--ease); }
+  .tabbar .tab-mas[aria-expanded="true"] { transform: rotate(45deg); background: var(--accent); color: var(--accent-ink); }
+  .tabbar .tab-mas svg { width: 24px; height: 24px; }
+  body.movil-acciones .hoja-acciones { display: grid; position: fixed; left: 12px; right: 12px; bottom: calc(86px + env(safe-area-inset-bottom)); z-index: 45; gap: 4px; padding: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 20px 50px rgba(0, 0, 0, .5); }
+  .hoja-acciones a { display: flex; align-items: center; gap: 14px; padding: 14px 12px; border-radius: 12px; text-decoration: none; color: var(--text); }
+  .hoja-acciones a:active, .hoja-acciones a:hover { background: var(--raised); }
+  .hoja-acciones a > svg { width: 22px; height: 22px; color: var(--accent); flex: none; }
+  .hoja-acciones b { display: block; font-size: var(--t-base); }
+  .hoja-acciones small { color: var(--muted); font-size: var(--t-xs); }
+  body.movil-menu .velo, body.movil-acciones .velo { display: block; position: fixed; inset: 0; z-index: 30; background: rgba(0, 0, 0, .55); }
+  body.movil-menu, body.movil-acciones { overflow: hidden; }
+  .main { padding-bottom: calc(108px + env(safe-area-inset-bottom)); }
+  .form .just-movil { order: -1; padding: 12px; border: 1px dashed var(--accent); border-radius: var(--r); background: var(--accent-soft); }
+  input, select, textarea { font-size: 16px; }
+}
+@media (max-width: 640px) {
+  .main .table-wrap:has(table.tarjetas) { overflow: visible; border: 0; background: none; }
+  table.tarjetas, table.tarjetas tbody, table.tarjetas tfoot { display: block; }
+  table.tarjetas thead { display: none; }
+  table.tarjetas tr { display: block; padding: 10px 14px; margin-bottom: 10px; background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--r); }
+  table.tarjetas td { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 5px 0; border: 0; white-space: normal; text-align: right; min-width: 0; }
+  table.tarjetas td.wrap { min-width: 0; }
+  table.tarjetas td[data-label]::before { content: attr(data-label); color: var(--faint); font-size: var(--t-xs); text-align: left; flex: none; }
+  table.tarjetas tbody td:first-child { display: block; text-align: left; font-size: var(--t-base); padding-bottom: 8px; margin-bottom: 4px; border-bottom: 1px solid var(--line-soft); }
+  table.tarjetas tbody td:first-child::before { content: none; }
+  table.tarjetas td:empty { display: none; }
+  table.tarjetas td .actions { justify-content: flex-end; flex-wrap: wrap !important; }
+  table.tarjetas tfoot tr { background: var(--raised); }
+  table.tarjetas tfoot td { background: none; justify-content: flex-end; }
+}
+@media (max-width: 860px) {
+  .tabbar a > svg, .tabbar button:not(.tab-mas) > svg { width: 22px; height: 22px; flex: none; }
+  .tabbar .count { all: unset; position: absolute; top: 4px; left: calc(50% + 6px); min-width: 16px; height: 16px; padding: 0 4px; box-sizing: border-box; border-radius: 8px; background: var(--bad); color: #fff; font-size: 10px; font-weight: 700; line-height: 16px; text-align: center; }
+}
+@media print { .tabbar, .hoja-acciones, .velo { display: none !important; } table.tarjetas thead { display: table-header-group !important; } }
