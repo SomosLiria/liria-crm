@@ -577,3 +577,5 @@ table.tri th[scope=row] small { display: block; color: var(--faint); font-weight
 .carp-ico { flex: none; width: 34px; height: 40px; border-radius: 5px; display: grid; place-items: center; font-size: 9px; font-weight: 800; background: var(--accent-soft); color: var(--accent); border: 1px solid rgba(240, 90, 40, .35); }
 .carp-mas, .carp-subir { font-size: var(--t-xs); color: var(--muted); text-decoration: none; margin-top: auto; }
 .carp-mas { color: var(--text); } .carp-subir:hover, .carp-mas:hover { color: var(--accent); }
+
+.line .line-det { grid-column: 1 / -1; font-size: var(--t-sm); color: var(--muted); }
