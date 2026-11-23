@@ -579,3 +579,6 @@ table.tri th[scope=row] small { display: block; color: var(--faint); font-weight
 .carp-mas { color: var(--text); } .carp-subir:hover, .carp-mas:hover { color: var(--accent); }
 
 .line .line-det { grid-column: 1 / -1; font-size: var(--t-sm); color: var(--muted); }
+
+.solo-print { display: none; }
+@media print { .solo-print { display: block !important; } }
