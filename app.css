@@ -582,3 +582,10 @@ table.tri th[scope=row] small { display: block; color: var(--faint); font-weight
 
 .solo-print { display: none; }
 @media print { .solo-print { display: block !important; } }
+
+.tarea-panel { border-bottom: 1px solid var(--line-soft); padding: 6px 0; }
+.tarea-panel > summary { cursor: pointer; list-style: none; line-height: 1.4; }
+.tarea-panel > summary::-webkit-details-marker { display: none; }
+.tarea-panel[open] > summary { font-weight: 600; }
+
+.lic-ficha { white-space: pre-wrap; font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; margin: 0; max-height: 70vh; overflow: auto; color: var(--text); }
