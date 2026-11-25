@@ -589,3 +589,5 @@ table.tri th[scope=row] small { display: block; color: var(--faint); font-weight
 .tarea-panel[open] > summary { font-weight: 600; }
 
 .lic-ficha { white-space: pre-wrap; font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; margin: 0; max-height: 70vh; overflow: auto; color: var(--text); }
+
+.recepcion { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line-soft); font-size: var(--t-sm); }
