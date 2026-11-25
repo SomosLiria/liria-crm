@@ -591,3 +591,14 @@ table.tri th[scope=row] small { display: block; color: var(--faint); font-weight
 .lic-ficha { white-space: pre-wrap; font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; margin: 0; max-height: 70vh; overflow: auto; color: var(--text); }
 
 .recepcion { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line-soft); font-size: var(--t-sm); }
+
+/* Auditoría de desbordes (25/11/2026) */
+@media (max-width: 640px) {
+  table.tarjetas td { flex-wrap: wrap; }
+  table.tarjetas td > * { max-width: 100%; }
+  table.tarjetas td .btn, table.tarjetas td button { white-space: normal; }
+  .doc-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .kpi span, .kpi small, .kpi b { overflow-wrap: anywhere; }
+  .btn { white-space: normal; text-align: center; }
+}
+.panel:has(> article.fx), .doc-hoja { overflow-x: auto; }
