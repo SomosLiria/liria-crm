@@ -602,3 +602,15 @@ table.tri th[scope=row] small { display: block; color: var(--faint); font-weight
   .btn { white-space: normal; text-align: center; }
 }
 .panel:has(> article.fx), .doc-hoja { overflow-x: auto; }
+
+/* Gestoría */
+.gest-fila { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: var(--s3); align-items: start; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+.gest-fila:last-child { border-bottom: 0; }
+.gest-fecha { text-align: center; background: var(--ground); border: 1px solid var(--line-soft); border-radius: var(--r-sm); padding: 6px 0; }
+.gest-fecha b { display: block; font-size: var(--t-md); } .gest-fecha small { color: var(--faint); font-size: var(--t-xs); }
+.gest-fila.no_toca, .gest-fila.presentada { opacity: .72; }
+.gest-txt { min-width: 0; }
+.gest-como { margin-top: 6px; font-size: var(--t-sm); }
+.gest-como > summary { cursor: pointer; color: var(--muted); }
+.gest-como ol { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 4px; }
+@media (max-width: 640px) { .gest-fila { grid-template-columns: 48px minmax(0, 1fr); } .gest-acc { grid-column: 2; } }
