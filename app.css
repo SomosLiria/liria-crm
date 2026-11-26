@@ -617,3 +617,15 @@ table.tri th[scope=row] small { display: block; color: var(--faint); font-weight
 
 tr.anulada td { opacity: .5; }
 tr.anulada:hover td { opacity: .85; }
+
+/* Tu bandeja */
+.band-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: var(--s4); }
+.band { display: grid; gap: 10px; }
+.band-h { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.band-l { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 10px; }
+.band-l span { color: var(--faint); font-size: var(--t-xs); padding-top: 2px; }
+.band-l p { margin: 0; color: var(--muted); line-height: 1.45; }
+.band-acc { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; border-top: 1px solid var(--line-soft); padding-top: 12px; }
+.band-acc details { flex-basis: 100%; }
+.band-acc summary { list-style: none; display: inline-flex; } .band-acc summary::-webkit-details-marker { display: none; }
+@media (max-width: 640px) { .band-grid { grid-template-columns: minmax(0, 1fr); } .band-l { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
